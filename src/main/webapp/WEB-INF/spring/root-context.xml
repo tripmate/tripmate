@@ -21,7 +21,7 @@
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-		<property name="url" value="jdbc:log4jdbc:postgresql://127.0.0.1:5432/Study" />
+		<property name="url" value="jdbc:log4jdbc:postgresql://175.116.32.6:5432/Study" />
 		<property name="username" value="postgres" />
 		<property name="password" value="admin" />
 	</bean>

@@ -37,14 +37,14 @@ public class MemberDAOTest {
 		
 	}
 	
-	//@Test
+	@Test
 	public void testSelectMember() throws Exception {
 		
 		System.out.println(dao.readMember("user02"));
 		
 	}
 	
-	@Test
+	//@Test
 	public void testReadMemberWithPW() throws Exception {
 	
 		System.out.println(dao.readWithPW("user02", "user02"));
