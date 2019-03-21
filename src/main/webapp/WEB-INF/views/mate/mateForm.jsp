@@ -14,11 +14,11 @@
 				<label for="mate_no">게시글 번호</label>
 				<input type="text" id="mate_no" name="mate_no" class="form-control" value="${mateVO.mate_no}" readonly="readonly" />
 				<label for="writer">작성자</label>
-				<input type="text" id="writer" name="writer" class="form-control" value="${mateVO.writer}" readonly="readonly" />
+				<input type="text" id="writer" name="writer" class="form-control" value="${mateVO.writer}" />
 				<label for="title">제목</label>
-				<input type="text" id="title" name="title" class="form-control" value="${mateVO.title}" readonly="readonly" />
+				<input type="text" id="title" name="title" class="form-control" value="${mateVO.title}" />
 				<label for="content">내용</label>
-				<textarea id="content" name="content" class="form-control" rows="3" readonly>${mateVO.content}</textarea>
+				<textarea id="content" name="content" class="form-control" rows="10">${mateVO.content}</textarea>
 				<label for="regdate">등록일</label>
 				<input type="text" id="regdate" name="regdate" class="form-control" value="${mateVO.regdate}" readonly="readonly" />
 				<label for="updatedate">수정일</label>

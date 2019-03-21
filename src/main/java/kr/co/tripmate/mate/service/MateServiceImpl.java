@@ -20,9 +20,30 @@ public class MateServiceImpl implements MateService {
 	private MateDAO mateDAO;
 	
 	@Override
-	public List<MateVO> selectMateList(String writer) throws Exception {
+	public List<MateVO> selectMateList() throws Exception {
 
-		return mateDAO.selectMateList(writer); 
+		return mateDAO.selectMateList(); 
+		
+	}
+	
+	@Override
+	public MateVO selectMateInfo(int mate_no) throws Exception {
+
+		return mateDAO.selectMateInfo(mate_no);
+		
+	}
+	
+	@Override
+	public void insertMateInfo(MateVO mateVO) throws Exception {
+
+		mateDAO.insertMateInfo(mateVO);
+		
+	}
+	
+	@Override
+	public void updateMateInfo(MateVO mateVO) throws Exception {
+
+		mateDAO.updateMateInfo(mateVO);
 		
 	}
 

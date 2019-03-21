@@ -6,13 +6,15 @@
 <mapper namespace="kr.co.tripmate.mate.mapper.MateMapper">
 
 	<select id="selectMateList" resultType="kr.co.tripmate.mate.vo.MateVO">
+		  SELECT   *
+			FROM   TBL_MATE
+		ORDER BY   MATE_NO
+	</select>
+	
+	<select id="selectMateInfo" resultType="kr.co.tripmate.mate.vo.MateVO">
 		SELECT   *
 		  FROM   TBL_MATE
-		<where>
-			<if test="writer != null and writer != ''">
-				WRITER = #{writer}
-			</if>
-		</where>
+		 WHERE   MATE_NO = #{mate_no}
 	</select>
 
 	<insert id="insertMateInfo">
@@ -29,7 +31,8 @@
 	
 	<update id="updateMateInfo">
 		UPDATE   TBL_MATE
-		   SET   TITLE = #{title},
+		   SET   WRITER = #{writer},
+		   		 TITLE = #{title},
 		   		 CONTENT = #{content},
 		   		 UPDATEDATE = NOW()
 		 WHERE   MATE_NO = #{mate_no}
