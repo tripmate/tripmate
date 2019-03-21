@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.tripmate.user.mapper.UserMapper">
+
+	<select id="getTime" resultType="string">
+		SELECT NOW()
+	</select>
+	
+	<select id="selectUserList" resultType="kr.co.tripmate.user.vo.UserVO">
+		SELECT   *
+		  FROM   TBL_USER
+	</select>
+	
+<!-- 	<insert id="insertMember">
+		INSERT INTO TBL_MEMBER (
+			USERID,
+			USERPW,
+			USERNAME,
+			EMAIL
+		) VALUES (
+			#{userid},
+			#{userpw},
+			#{username},
+			#{email}
+		)
+	</insert>
+	
+	<select id="selectMember" resultType="kr.co.tripmate.domain.MemberVO">
+		SELECT *
+		  FROM TBL_MEMBER
+		 WHERE USERID = #{userid}
+	</select>
+	
+	<select id="readWithPW" resultType="kr.co.tripmate.domain.MemberVO">
+		SELECT *
+		  FROM TBL_MEMBER
+		 WHERE USERID = #{userid}
+		   AND USERPW = #{userpw}
+	</select> -->
+
+</mapper>
